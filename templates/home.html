@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skybiz communication network-home{% endblock %}
+
+{% block content %}
+{% comment %} <section id="hero" class="py-16 bg-gray-100 dark:bg-gray-900"> {% endcomment %}
+<!-- Hero Section with Background Image -->
+<section class="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-gray-1000" style="background-image: url('{% static 'images/sc-synergy-list.jpg' %}');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for text readability -->
+    <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Experience Lightning-Fast Internet</h1>
+        <p class="text-lg md:text-xl lg:text-2xl mb-6">Connect with Skybiz Communication Network for reliable, high-speed internet solutions tailored to your needs.</p>
+        <a href="{% url 'packages' %}" class="inline-block bg-primary white:bg-secondary text-white dark:text-primary px-6 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+            Explore Plans
+        </a>
+    </div>
+</section>
+    {% comment %} <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Carousel -->
+        {% if carousel_images %}
+        <div class="relative">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image in carousel_images %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img src="{{ image.image.url }}" class="w-full h-96 object-cover rounded-lg" alt="{{ image.title }}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-2xl font-bold text-white">{{ image.title }}</h5>
+                            <p class="text-white">{{ image.caption }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        {% else %}
+        <div class="text-center text-gray-600 dark:text-gray-300">
+            <p>No carousel images available.</p>
+        </div>
+        {% endif %} {% endcomment %}
+
+        <!-- Hero Content -->
+        {% comment %} <div class="text-center mt-12">
+            <h1 class="text-4xl font-bold text-primary dark:text-secondary">Welcome to Skybiz communication Network</h1>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Experience blazing-fast internet with our premium plans.</p>
+            <a href="{% url 'packages' %}" class="mt-6 inline-block bg-primary dark:bg-secondary text-white dark:text-primary px-6 py-3 rounded-lg hover:bg-opacity-90">
+                Explore Plans
+            </a>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+        <!-- Controls -->
+        {% comment %} <button class="carousel-control-prev absolute top-1/2 -translate-y-1/2 left-4 w-12 h-12 flex items-center justify-center bg-gray-500 dark:bg-gray-300 rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="inline-block w-6 h-6 bg-no-repeat bg-center bg-[url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3E%3Cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3E%3C/svg%3E')] filter invert-0 dark:invert" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next absolute top-1/2 -translate-y-1/2 right-4 w-12 h-12 flex items-center justify-center bg-gray-500 dark:bg-gray-300 rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="inline-block w-6 h-6 bg-no-repeat bg-center bg-[url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3E%3Cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3E%3C/svg%3E')] filter invert-0 dark:invert" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div> {% endcomment %}
+
+    <!-- Highlights -->
+    <div class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary dark:text-secondary">Lightning Speed</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Up to 1Gbps download speeds</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary dark:text-secondary">Wide Coverage</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Available in 5+ cities Network</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary dark:text-secondary">24/7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Round-the-clock technical assistance</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gray-50 dark:bg-gray-700">
+                    <div class="text-4xl mb-4">৳</div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary dark:text-secondary">Affordable Pricing</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Competitive rates for all budgets</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Speed Test Section -->
+<div class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8 text-primary dark:text-secondary">Test Your Internet Speed</h2>
+        <div class="speed-test-widget mx-auto max-w-md">
+            <div class="speed-meter relative w-64 h-64 mx-auto mb-6">
+                <svg>
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                    <span id="speedValue" class="text-8xl font-bold text-primary dark:text-secondary">0</span>
+                    <span class="block text-3xl text-gray-600 dark:text-gray-300">Mbps</span>
+                </div>
+                </div>
+            </div>
+            <div class="mb-6">
+                <div id="speedStatus" class="text-lg font-semibold text-primary dark:text-secondary mb-4">Click to start the test</div>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <span class="block text-gray-600 dark:text-gray-300">Download</span>
+                        <span id="downloadSpeed" class="text-lg font-semibold text-primary dark:text-secondary">-- Mbps</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <span class="block text-gray-600 dark:text-gray-300">Upload</span>
+                        <span id="uploadSpeed" class="text-lg font-semibold text-primary dark:text-secondary">-- Mbps</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <span class="block text-gray-600 dark:text-gray-300">Latency</span>
+                        <span id="latency" class="text-lg font-semibold text-primary dark:text-secondary">-- ms</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <span class="block text-gray-600 dark:text-gray-300">IP Address</span>
+                        <span id="ipAddress" class="text-lg font-semibold text-primary dark:text-secondary">--</span>
+                    </div>
+                </div>
+            </div>
+            <button id="startSpeedTest" class="w-full bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-all">Start Speed Test</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Package Preview -->
+    <div class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary dark:text-secondary">Popular Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for package in popular_packages %}
+                <div class="package-card bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-secondary {% if package.is_popular %}transform scale-105{% endif %}">
+                    {% if package.is_popular %}
+                    <div class="text-center mb-4">
+                        <span class="bg-primary text-secondary px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    {% endif %}
+                    <h3 class="text-xl font-semibold mb-4 text-primary dark:text-secondary">{{ package.name }}</h3>
+                    <div class="text-3xl font-bold mb-2 text-primary dark:text-secondary">৳{{ package.price }}<span class="text-sm font-normal">/month</span></div>
+                    <ul class="space-y-2 mb-6 text-gray-600 dark:text-gray-300">
+                        <li>✓ {{ package.download_speed }} Mbps Download</li>
+                        <li>✓ {{ package.upload_speed }} Mbps Upload</li>
+                        <li>✓ {{ package.data_limit }}</li>
+                        <li>✓ {{ package.features }}</li>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-8">
+                <a href="{% url 'packages' %}" class="bg-primary dark:bg-secondary text-white dark:text-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                    View All Packages
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block scripts %}
+<style>
+    .progress-arc {
+        transition: stroke-dashoffset 0.3s linear;
+    }
+</style>
+        <style>
+            .progress-arc {
+                transition: stroke-dashoffset 0.3s linear;
+            }
+            .bg-arc {
+                transition: stroke 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        </style>
+<script>
+    const startSpeedTest = document.getElementById('startSpeedTest');
+    const speedProgress = document.getElementById('speedProgress');
+    const speedValue = document.getElementById('speedValue');
+    const speedStatus = document.getElementById('speedStatus');
+    const downloadSpeed = document.getElementById('downloadSpeed');
+    const uploadSpeed = document.getElementById('uploadSpeed');
+    const latency = document.getElementById('latency');
+    const ipAddress = document.getElementById('ipAddress');
+
+    // Ensure initial value for progress arc
+    if (speedProgress) {
+        speedProgress.style.strokeDasharray = '283';
+        speedProgress.style.strokeDashoffset = '283';
+    }
+
+    startSpeedTest.addEventListener('click', async () => {
+            // Animate background arc color during test
+            const speedBgArc = document.getElementById('speedBgArc');
+            if (speedBgArc) {
+                speedBgArc.setAttribute('stroke', '#06b6d4');
+            }
+        // Start loading animation
+        if (speedProgress) {
+            speedProgress.classList.add('loading');
+            speedProgress.style.strokeDashoffset = '283';
+        }
+        startSpeedTest.disabled = true;
+        startSpeedTest.textContent = 'Testing...';
+        speedStatus.textContent = 'Testing your connection...';
+        speedValue.textContent = '0';
+        downloadSpeed.textContent = '-- Mbps';
+        uploadSpeed.textContent = '-- Mbps';
+        latency.textContent = '-- ms';
+        ipAddress.textContent = '--';
+        
+        try {
+            let progress = 0;
+            const maxArcLength = 283;
+            let animationActive = true;
+            // Animate the circle in real time
+            const animationInterval = setInterval(() => {
+                if (!animationActive) return;
+                progress += 2 + Math.random() * 3;
+                if (progress > 100) progress = 0;
+                const dashOffset = maxArcLength * (1 - progress / 100);
+                if (speedProgress) speedProgress.style.strokeDashoffset = dashOffset;
+                speedValue.textContent = Math.floor(progress);
+                if (progress >= 100) {
+                    clearInterval(animationInterval);
+                }
+            }, 30);
+
+            const response = await fetch('{% url "speed_test" %}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/json'
+                }
+            });
+            const result = await response.json();
+
+            if (result.error) {
+                throw new Error(result.error);
+            }
+
+            // End animation and show results
+            animationActive = false;
+            if (speedProgress) {
+                speedProgress.classList.remove('loading');
+                speedProgress.style.strokeDashoffset = 0;
+            }
+            // Restore background arc color
+            if (speedBgArc) {
+                speedBgArc.setAttribute('stroke', '#e5e7ef');
+            }
+            speedValue.textContent = Math.floor(result.download_speed);
+            downloadSpeed.textContent = `${result.download_speed.toFixed(2)} Mbps`;
+            uploadSpeed.textContent = `${result.upload_speed.toFixed(2)} Mbps`;
+            latency.textContent = `${result.ping.toFixed(2)} ms`;
+            ipAddress.textContent = result.ip_address;
+            speedStatus.textContent = 'Test completed!';
+            startSpeedTest.disabled = false;
+            startSpeedTest.textContent = 'Test Again';
+        } catch (error) {
+            if (speedProgress) speedProgress.classList.remove('loading');
+            speedStatus.textContent = 'Error running speed test. Please try again.';
+            startSpeedTest.disabled = false;
+            startSpeedTest.textContent = 'Test Again';
+        }
+    });
+</script>
+{% endblock scripts%}
+{% endblock %}
